@@ -37,7 +37,4 @@ public abstract class Cliente implements Serializable {
 
     @Column(name = "esta_ativo")
     private Boolean estahAtivo;
-
-    @OneToMany(mappedBy = "customer")
-    private List<Locacao> locacoes;
 }

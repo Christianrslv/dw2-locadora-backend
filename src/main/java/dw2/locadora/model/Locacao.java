@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -22,13 +23,13 @@ public class Locacao implements Serializable {
     private Long id;
 
     @Column(name = "dt_locacao")
-    private LocalDateTime dtLocacao;
+    private LocalDate dtLocacao;
 
     @Column(name = "dt_devoluvao_prevista")
-    private LocalDateTime dtDevoluvaoPrevista;
+    private LocalDate dtDevolucaoPrevista;
 
     @Column(name = "dt_devolucao_efetiva")
-    private LocalDateTime dtDevolucaoEfetiva;
+    private LocalDate dtDevolucaoEfetiva;
 
     @Column(name = "valor_cobrado")
     private Double valorCobrado;
@@ -38,7 +39,7 @@ public class Locacao implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "cliente_id")
-    private Cliente customer;
+    private Socio customer;
 
     @ManyToOne
     @JoinColumn(name = "item_id")

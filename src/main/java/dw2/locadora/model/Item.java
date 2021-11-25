@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -25,7 +26,7 @@ public class Item implements Serializable {
     private String numSerie;
 
     @Column(name = "dt_aquisicao")
-    private LocalDateTime dtAcquisition;
+    private LocalDate dtAcquisition;
 
     @Column(name = "tipo_item")
     private String typeItem;
