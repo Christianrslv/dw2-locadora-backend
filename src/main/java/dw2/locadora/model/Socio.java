@@ -27,7 +27,4 @@ public class Socio extends Cliente implements Serializable {
 
     @Column(name = "tel")
     private String tel;
-
-    @OneToMany(mappedBy = "socio")
-    private List<Dependente> dependentes;
 }
